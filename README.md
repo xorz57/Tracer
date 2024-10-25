@@ -8,19 +8,19 @@
 #include "Tracer.hpp"
 
 std::uint64_t factorial(std::uint64_t n) {
-	ScopedTracer _("factorial", "function", { {"n", n} });
+	ScopedTracer st("factorial", "function", { {"n", n} });
 	if (n <= 1) return 1;
 	return n * factorial(n - 1);
 }
 
 std::uint64_t fibonacci(std::uint64_t n) {
-	ScopedTracer _("fibonacci", "function", { {"n", n} });
+	ScopedTracer st("fibonacci", "function", { {"n", n} });
 	if (n <= 1) return n;
 	return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 std::uint64_t factorial2(std::uint64_t n) {
-	ScopedTracer _("factorial2", "function", { {"n", n} });
+	ScopedTracer st("factorial2", "function", { {"n", n} });
 	std::uint64_t result = 1;
 	for (std::uint64_t i = 2; i <= n; ++i) {
 		result *= i;
@@ -29,7 +29,7 @@ std::uint64_t factorial2(std::uint64_t n) {
 }
 
 std::uint64_t fibonacci2(std::uint64_t n) {
-	ScopedTracer tracer("fibonacci2", "function", { {"n", n} });
+	ScopedTracer st("fibonacci2", "function", { {"n", n} });
 	if (n <= 1) return n;
 	std::uint64_t a = 0;
 	std::uint64_t b = 1;
