@@ -13,7 +13,7 @@
 #include <unistd.h>
 #endif
 
-#define TRACER_SCOPE(name, categories, ...) TracerScope _tracer_scope_##__LINE__(name, categories, __VA_ARGS__);
+#define TRACER_SCOPE(name, categories, ...) TracerScope _tracer_scope_##__LINE__(name, categories, __VA_ARGS__)
 
 #define TRACER_DURATION_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
 #define TRACER_DURATION_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "E", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
