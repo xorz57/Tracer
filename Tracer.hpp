@@ -87,7 +87,11 @@ private:
 
 class TracerScope {
 public:
-	TracerScope(const char* name, const char* categories, const nlohmann::json& args = nlohmann::json::object()) : name(name), categories(categories), args(args) {
+	TracerScope(const char* name, const char* categories, const nlohmann::json& args) : name(name), categories(categories), args(args) {
+		TRACER_DURATION_EVENT_BEGIN(name, categories, args);
+	}
+
+	TracerScope(const char* name, const char* categories) : name(name), categories(categories), args(nlohmann::json::object()) {
 		TRACER_DURATION_EVENT_BEGIN(name, categories, args);
 	}
 
