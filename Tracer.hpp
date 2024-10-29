@@ -69,10 +69,10 @@ public:
 		mData["traceEvents"].emplace_back(traceEvent);
 	}
 
-	std::string dump(int indent = 4) {
-		std::lock_guard<std::mutex> lock(mDataMutex);
-		return mData.dump(indent);
-	}
+	// std::string dump(int indent = 4) {
+	// 	std::lock_guard<std::mutex> lock(mDataMutex);
+	// 	return mData.dump(indent);
+	// }
 
 	void dump(const char* filename, int indent = 4) {
 		std::lock_guard<std::mutex> lock(mDataMutex);
