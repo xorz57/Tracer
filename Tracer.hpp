@@ -56,7 +56,7 @@ public:
 #endif
 	}
 
-	void traceEvent(const char* name, const char* categories, const char* phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp, const nlohmann::json& args = nlohmann::json::object()) {
+	void traceEvent(const std::string &name, const std::string &categories, const std::string &phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp, const nlohmann::json& args = nlohmann::json::object()) {
 		std::lock_guard<std::mutex> lock(mDataMutex);
 		nlohmann::json traceEvent;
 		traceEvent["name"] = name;
@@ -68,11 +68,6 @@ public:
 		traceEvent["args"] = args;
 		mData["traceEvents"].emplace_back(traceEvent);
 	}
-
-	// std::string dump(int indent = 4) {
-	// 	std::lock_guard<std::mutex> lock(mDataMutex);
-	// 	return mData.dump(indent);
-	// }
 
 	void dump(const char* filename, int indent = 4) {
 		std::lock_guard<std::mutex> lock(mDataMutex);
@@ -88,15 +83,15 @@ private:
 class TracerScope {
 public:
 	TracerScope(const char* name, const char* categories, const nlohmann::json& args) : name(name), categories(categories), args(args) {
-		TRACER_DURATION_EVENT_BEGIN(name, categories, args);
+		Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), args);
 	}
 
 	TracerScope(const char* name, const char* categories) : name(name), categories(categories), args(nlohmann::json::object()) {
-		TRACER_DURATION_EVENT_BEGIN(name, categories, args);
+		Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), args);
 	}
 
 	~TracerScope() {
-		TRACER_DURATION_EVENT_END(name, categories, args);
+		Tracer::getInstance().traceEvent(name, categories, "E", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), args);
 	}
 
 private:
