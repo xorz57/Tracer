@@ -37,7 +37,7 @@ public:
 	}
 
 	static std::uint64_t getTimestamp() {
-		const auto now = std::chrono::steady_clock::now();
+		const auto now = std::chrono::high_resolution_clock::now();
 		const auto duration = now.time_since_epoch();
 		const auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(duration);
 		return static_cast<std::uint64_t>(microseconds.count());
