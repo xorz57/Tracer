@@ -103,5 +103,5 @@ public:
 private:
 	const std::string name;
 	const std::string categories;
-	nlohmann::json args;
+	const nlohmann::json args;
 };
