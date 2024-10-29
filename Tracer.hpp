@@ -95,7 +95,7 @@ public:
 	}
 
 private:
-	const char* name;
-	const char* categories;
+	const std::string name;
+	const std::string categories;
 	nlohmann::json args;
 };
