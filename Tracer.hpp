@@ -28,6 +28,9 @@
 
 class Tracer {
 public:
+	Tracer(const Tracer&) = delete;
+	Tracer(Tracer&&) = delete;
+
 	static Tracer& getInstance() {
 		static Tracer instance;
 		return instance;
@@ -76,6 +79,9 @@ public:
 	}
 
 private:
+	Tracer() = default;
+	~Tracer() = default;
+
 	nlohmann::json mData;
 	std::mutex mDataMutex;
 };
