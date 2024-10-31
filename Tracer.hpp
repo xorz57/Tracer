@@ -90,20 +90,20 @@ private:
 
 class TracerScope {
 public:
-	TracerScope(const char* name, const char* categories, const nlohmann::json& args) : name(name), categories(categories), args(args) {
+	TracerScope(const char* name, const char* categories, const nlohmann::json& args) : mName(name), mCategories(categories), mArgs(args) {
 		Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), args);
 	}
 
-	TracerScope(const char* name, const char* categories) : name(name), categories(categories), args(nlohmann::json::object()) {
-		Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), args);
+	TracerScope(const char* name, const char* categories) : mName(name), mCategories(categories), mArgs(nlohmann::json::object()) {
+		Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), mArgs);
 	}
 
 	~TracerScope() {
-		Tracer::getInstance().traceEvent(name, categories, "E", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), args);
+		Tracer::getInstance().traceEvent(mName, mCategories, "E", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), mArgs);
 	}
 
 private:
-	const char* name;
-	const char* categories;
-	const nlohmann::json args;
+	const char* mName;
+	const char* mCategories;
+	const nlohmann::json mArgs;
 };
