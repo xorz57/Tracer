@@ -103,7 +103,7 @@ public:
 	}
 
 private:
-	const char *name;
-	const char *categories;
+	const char* name;
+	const char* categories;
 	const nlohmann::json args;
 };
