@@ -13,5 +13,5 @@ std::uint64_t factorial(std::uint64_t n) {
 
 int main() {
 	std::cout << factorial(10) << std::endl;
-	Tracer::getInstance().dump("trace.json", 4);
+	TRACER_DUMP("trace.json", 4);
 }

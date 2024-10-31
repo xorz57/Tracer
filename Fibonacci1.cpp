@@ -10,5 +10,5 @@ std::uint64_t fibonacci(std::uint64_t n) {
 
 int main() {
 	std::cout << fibonacci(10) << std::endl;
-	Tracer::getInstance().dump("trace.json", 4);
+	TRACER_DUMP("trace.json", 4);
 }
