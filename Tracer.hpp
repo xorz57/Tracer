@@ -13,6 +13,14 @@
 #include <unistd.h>
 #endif
 
+#if defined(__GNUC__) || defined(__clang__)
+#define TRACER_FUNCTION(categories, ...) TracerScope _tracer_scope_##__LINE__(__PRETTY_FUNCTION__, categories, __VA_ARGS__)
+#elif defined(_MSC_VER)
+#define TRACER_FUNCTION(categories, ...) TracerScope _tracer_scope_##__LINE__(__FUNCSIG__, categories, __VA_ARGS__)
+#else
+#define TRACER_FUNCTION(categories, ...) TracerScope _tracer_scope_##__LINE__(__func__, categories, __VA_ARGS__)
+#endif
+
 #define TRACER_SCOPE(name, categories, ...) TracerScope _tracer_scope_##__LINE__(name, categories, __VA_ARGS__)
 
 #define TRACER_DURATION_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
