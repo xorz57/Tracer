@@ -13,18 +13,20 @@
 #include <unistd.h>
 #endif
 
-#define TRACER_SCOPE(name, categories, ...) TracerScope _tracer_scope_##__LINE__(name, categories, __VA_ARGS__)
+#define TRACER_SCOPE(name, categories, ...) TracerScope _tracer_scope_##__LINE__(name, categories, ##__VA_ARGS__)
 
-#define TRACER_DURATION_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_DURATION_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "E", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_INSTANT_EVENT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "i", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_COUNTER_EVENT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "C", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_ASYNC_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "b", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_ASYNC_EVENT_INSTANT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "n", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_ASYNC_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "e", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_FLOW_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "s", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_FLOW_EVENT_INSTANT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "t", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
-#define TRACER_FLOW_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "f", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), __VA_ARGS__)
+#define TRACER_DURATION_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "B", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_DURATION_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "E", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_INSTANT_EVENT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "i", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_COUNTER_EVENT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "C", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_ASYNC_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "b", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_ASYNC_EVENT_INSTANT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "n", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_ASYNC_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "e", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_FLOW_EVENT_BEGIN(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "s", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_FLOW_EVENT_INSTANT(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "t", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+#define TRACER_FLOW_EVENT_END(name, categories, ...) Tracer::getInstance().traceEvent(name, categories, "f", Tracer::getProcessId(), Tracer::getThreadId(), Tracer::getTimestamp(), ##__VA_ARGS__)
+
+#define TRACER_DUMP(filename, indentation) Tracer::getInstance().dump(filename, indentation)
 
 class Tracer {
 public:
