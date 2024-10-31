@@ -1,5 +1,9 @@
 # Tracer
 
+## Dependencies
+
+- [nlohmann/json](https://github.com/nlohmann/json)
+
 ## Examples
 
 ### Factorial 1
