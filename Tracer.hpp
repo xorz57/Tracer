@@ -97,7 +97,7 @@ public:
 #endif
 	}
 
-	void traceEvent(const std::string& name, const std::string& categories, const std::string& phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp, const nlohmann::json& args = nlohmann::json::object()) {
+	void traceEvent(const char *name, const char *categories, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp, const nlohmann::json& args = nlohmann::json::object()) {
 		std::lock_guard<std::mutex> lock(mDataMutex);
 		nlohmann::json traceEvent;
 		traceEvent["name"] = name;
