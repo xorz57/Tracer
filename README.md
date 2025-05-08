@@ -11,17 +11,17 @@
 ```cpp
 #include <iostream>
 
-#include "Tracer.hpp"
+#include "tracing.hpp"
 
 std::uint64_t factorial(std::uint64_t n) {
-	TRACER_SCOPE("factorial", "function", { {"n", n} });
-	if (n <= 1) return 1;
-	return n * factorial(n - 1);
+    const tracing::DurationEvent event{"factorial", { {"n", n} }};
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
 }
 
 int main() {
-	std::cout << factorial(10) << std::endl;
-	TRACER_DUMP("trace.json", 4);
+    std::cout << factorial(10) << std::endl;
+    tracing::Tracer::get_instance().dump("trace.json", 4);
 }
 ```
 
@@ -32,17 +32,17 @@ int main() {
 ```cpp
 #include <iostream>
 
-#include "Tracer.hpp"
+#include "tracing.hpp"
 
 std::uint64_t fibonacci(std::uint64_t n) {
-	TRACER_SCOPE("fibonacci", "function", { {"n", n} });
-	if (n <= 1) return n;
-	return fibonacci(n - 1) + fibonacci(n - 2);
+    const tracing::DurationEvent event{"fibonacci", { {"n", n} }};
+    if (n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 int main() {
-	std::cout << fibonacci(10) << std::endl;
-	TRACER_DUMP("trace.json", 4);
+    std::cout << fibonacci(10) << std::endl;
+    tracing::Tracer::get_instance().dump("trace.json", 4);
 }
 ```
 
@@ -53,20 +53,20 @@ int main() {
 ```cpp
 #include <iostream>
 
-#include "Tracer.hpp"
+#include "tracing.hpp"
 
 std::uint64_t factorial(std::uint64_t n) {
-	TRACER_SCOPE("factorial", "function", { {"n", n} });
-	std::uint64_t result = 1;
-	for (std::uint64_t i = 2; i <= n; ++i) {
-		result *= i;
-	}
-	return result;
+    const tracing::DurationEvent event{"factorial", { {"n", n} }};
+    std::uint64_t result = 1;
+    for (std::uint64_t i = 2; i <= n; ++i) {
+        result *= i;
+    }
+    return result;
 }
 
 int main() {
-	std::cout << factorial(10) << std::endl;
-	TRACER_DUMP("trace.json", 4);
+    std::cout << factorial(10) << std::endl;
+    tracing::Tracer::get_instance().dump("trace.json", 4);
 }
 ```
 
@@ -77,24 +77,24 @@ int main() {
 ```cpp
 #include <iostream>
 
-#include "Tracer.hpp"
+#include "tracing.hpp"
 
 std::uint64_t fibonacci(std::uint64_t n) {
-	TRACER_SCOPE("fibonacci", "function", { {"n", n} });
-	if (n <= 1) return n;
-	std::uint64_t a = 0;
-	std::uint64_t b = 1;
-	for (std::uint64_t i = 2; i <= n; ++i) {
-		std::uint64_t c = a + b;
-		a = b;
-		b = c;
-	}
-	return b;
+    const tracing::DurationEvent event{"fibonacci", { {"n", n} }};
+    if (n <= 1) return n;
+    std::uint64_t a = 0;
+    std::uint64_t b = 1;
+    for (std::uint64_t i = 2; i <= n; ++i) {
+        std::uint64_t c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
 }
 
 int main() {
-	std::cout << fibonacci(10) << std::endl;
-	TRACER_DUMP("trace.json", 4);
+    std::cout << fibonacci(10) << std::endl;
+    tracing::Tracer::get_instance().dump("trace.json", 4);
 }
 ```
 
