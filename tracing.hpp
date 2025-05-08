@@ -68,7 +68,7 @@ namespace tracing {
     #ifdef _WIN32
             return GetCurrentThreadId();
     #else
-            return static_cast<std::uint64_t>(pthread_self());
+            return static_cast<std::uint64_t>(gettid());
     #endif
         }
 
