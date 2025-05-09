@@ -42,6 +42,7 @@ namespace tracing {
 class Tracer final {
 public:
   Tracer(const Tracer &) = delete;
+
   Tracer(Tracer &&) = delete;
 
   static Tracer &get_instance() {
@@ -124,6 +125,7 @@ public:
 
 private:
   Tracer() = default;
+
   ~Tracer() = default;
 
   class ConcurrentQueue final {
