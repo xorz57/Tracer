@@ -130,7 +130,7 @@ static void instant_event(const char *name) {
 class DurationEvent final {
 public:
   DurationEvent(const char *name, nlohmann::json args) : m_name(std::move(name)) {
-    Tracer::get_instance().trace_duration_event(name, "B", Tracer::get_pid(), Tracer::get_tid(), Tracer::get_timestamp(), args);
+    Tracer::get_instance().trace_duration_event(name, "B", Tracer::get_pid(), Tracer::get_tid(), Tracer::get_timestamp(), std::move(args));
   }
 
   DurationEvent(const char *name) : m_name(name) {

@@ -2,13 +2,14 @@
 
 #include "tracing.hpp"
 
-std::uint64_t fibonacci(std::uint64_t n) {
-    const tracing::DurationEvent event{"fibonacci", { {"n", n} }};
-    if (n <= 1) return n;
-    return fibonacci(n - 1) + fibonacci(n - 2);
+auto fibonacci(std::uint64_t n) -> std::uint64_t {
+  const tracing::DurationEvent event{"fibonacci", {{"n", n}}};
+  if (n <= 1)
+    return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-int main() {
-    std::cout << fibonacci(10) << std::endl;
-    tracing::Tracer::get_instance().dump("trace.json", 4);
+auto main() -> int {
+  std::cout << fibonacci(10) << std::endl;
+  tracing::Tracer::get_instance().dump("trace.json", 4);
 }
