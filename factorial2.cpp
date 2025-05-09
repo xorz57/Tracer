@@ -12,6 +12,6 @@ auto factorial(std::uint64_t n) -> std::uint64_t {
 }
 
 auto main() -> int {
-  std::cout << factorial(10) << std::endl;
+  std::cout << factorial(20) << std::endl;
   tracing::Tracer::get_instance().dump("trace.json", 4);
 }
