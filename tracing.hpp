@@ -80,7 +80,7 @@ namespace tracing {
             traceEvent["pid"] = pid;
             traceEvent["tid"] = tid;
             traceEvent["ts"] = timestamp;
-            traceEvent["s"] = "g";
+            traceEvent["s"] = "t";
             m_data["traceEvents"].emplace_back(traceEvent);
         }
 
