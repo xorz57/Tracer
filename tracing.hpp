@@ -24,10 +24,9 @@
 
 #pragma once
 
-#include <atomic>
 #include <chrono>
-#include <cstdint>
 #include <fstream>
+#include <mutex>
 
 #include <nlohmann/json.hpp>
 
@@ -42,7 +41,6 @@ namespace tracing {
 class Tracer final {
 public:
   Tracer(const Tracer &) = delete;
-
   Tracer(Tracer &&) = delete;
 
   static Tracer &get_instance() {
@@ -73,9 +71,8 @@ public:
 #endif
   }
 
-  void trace_event(nlohmann::json event) { m_concurrent_queue.enqueue(std::move(event)); }
-
   void trace_instant_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
+    std::lock_guard<std::mutex> lock(m_data_mutex);
     nlohmann::json event;
     event["name"] = name;
     event["cat"] = "function";
@@ -84,10 +81,11 @@ public:
     event["tid"] = tid;
     event["ts"] = timestamp;
     event["s"] = "t";
-    trace_event(std::move(event));
+    m_data["traceEvents"].emplace_back(event);
   }
 
   void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp, nlohmann::json args) {
+    std::lock_guard<std::mutex> lock(m_data_mutex);
     nlohmann::json event;
     event["name"] = name;
     event["cat"] = "function";
@@ -96,10 +94,11 @@ public:
     event["tid"] = tid;
     event["ts"] = timestamp;
     event["args"] = std::move(args);
-    trace_event(std::move(event));
+    m_data["traceEvents"].emplace_back(event);
   }
 
   void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
+    std::lock_guard<std::mutex> lock(m_data_mutex);
     nlohmann::json event;
     event["name"] = name;
     event["cat"] = "function";
@@ -107,72 +106,21 @@ public:
     event["pid"] = pid;
     event["tid"] = tid;
     event["ts"] = timestamp;
-    trace_event(std::move(event));
-  }
-
-  void flush() {
-    nlohmann::json event;
-    while (m_concurrent_queue.try_dequeue(event)) {
-      m_data["traceEvents"].emplace_back(std::move(event));
-    }
+    m_data["traceEvents"].emplace_back(event);
   }
 
   void dump(const char *filename, int indent = 4) {
-    flush();
+    std::lock_guard<std::mutex> lock(m_data_mutex);
     std::ofstream ofs(filename);
     ofs << m_data.dump(indent);
   }
 
 private:
   Tracer() = default;
-
   ~Tracer() = default;
 
-  class ConcurrentQueue final {
-  private:
-    struct Node final {
-      nlohmann::json value;
-      std::atomic<Node *> next;
-
-      explicit Node(nlohmann::json val) : value(std::move(val)), next(nullptr) {}
-    };
-
-    std::atomic<Node *> m_head;
-    std::atomic<Node *> m_tail;
-
-  public:
-    ConcurrentQueue() {
-      Node *dummy = new Node({});
-      m_head.store(dummy);
-      m_tail.store(dummy);
-    }
-
-    ~ConcurrentQueue() {
-      while (Node *node = m_head.load()) {
-        m_head.store(node->next);
-        delete node;
-      }
-    }
-
-    void enqueue(nlohmann::json value) {
-      Node *new_node = new Node(std::move(value));
-      Node *old_tail = m_tail.exchange(new_node);
-      old_tail->next.store(new_node);
-    }
-
-    bool try_dequeue(nlohmann::json &result) {
-      Node *head = m_head.load();
-      Node *next = head->next.load();
-      if (!next) return false;
-      result = std::move(next->value);
-      m_head.store(next);
-      delete head;
-      return true;
-    }
-  };
-
-  ConcurrentQueue m_concurrent_queue;
   nlohmann::json m_data;
+  std::mutex m_data_mutex;
 };
 
 static void instant_event(const char *name) {
@@ -181,8 +129,8 @@ static void instant_event(const char *name) {
 
 class DurationEvent final {
 public:
-  DurationEvent(const char *name, nlohmann::json args) : m_name(name) {
-    Tracer::get_instance().trace_duration_event(name, "B", Tracer::get_pid(), Tracer::get_tid(), Tracer::get_timestamp(), std::move(args));
+  DurationEvent(const char *name, nlohmann::json args) : m_name(std::move(name)) {
+    Tracer::get_instance().trace_duration_event(name, "B", Tracer::get_pid(), Tracer::get_tid(), Tracer::get_timestamp(), args);
   }
 
   DurationEvent(const char *name) : m_name(name) {
@@ -196,5 +144,4 @@ public:
 private:
   const char *m_name;
 };
-
 } // namespace tracing
