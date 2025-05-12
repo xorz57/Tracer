@@ -104,9 +104,7 @@ public:
   }
 
 private:
-  Tracer() {
-    m_data.reserve(8192000);
-  }
+  Tracer() = default;
   ~Tracer() = default;
 
   std::string m_data;
