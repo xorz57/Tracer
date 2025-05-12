@@ -71,6 +71,10 @@ public:
 
   void trace_instant_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
+    if (!m_flag) {
+      m_data += ",";
+    }
+    m_flag = false;
     std::string event = "{";
     event += "\"name\":\"" + std::string(name) + "\",";
     event += "\"cat\":\"function\",";
@@ -79,12 +83,16 @@ public:
     event += "\"tid\":" + std::to_string(tid) + ",";
     event += "\"ts\":" + std::to_string(timestamp) + ",";
     event += "\"s\":\"t\"";
-    event += "},\n";
+    event += "}\n";
     m_data += event;
   }
 
   void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
+    if (!m_flag) {
+      m_data += ",";
+    }
+    m_flag = false;
     std::string event = "{";
     event += "\"name\":\"" + std::string(name) + "\",";
     event += "\"cat\":\"function\",";
@@ -92,14 +100,14 @@ public:
     event += "\"pid\":" + std::to_string(pid) + ",";
     event += "\"tid\":" + std::to_string(tid) + ",";
     event += "\"ts\":" + std::to_string(timestamp);
-    event += "},\n";
+    event += "}\n";
     m_data += event;
   }
 
   void dump(const char *filename, int indent = 4) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
     std::ofstream ofs(filename);
-    ofs << "{\"traceEvents\":[\n" << m_data << "\n]}";
+    ofs << "{\"traceEvents\":[\n" << m_data << "]}";
   }
 
 private:
@@ -108,6 +116,7 @@ private:
 
   std::string m_data;
   std::mutex m_data_mutex;
+  bool m_flag{true};
 };
 
 static void instant_event(const char *name) {
