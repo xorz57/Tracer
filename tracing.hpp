@@ -25,6 +25,7 @@
 #pragma once
 
 #include <chrono>
+#include <cinttypes>
 #include <fstream>
 #include <mutex>
 
@@ -75,16 +76,11 @@ public:
       m_data += ",";
     }
     m_flag = false;
-    std::string event = "{";
-    event += "\"name\":\"" + std::string(name) + "\",";
-    event += "\"cat\":\"function\",";
-    event += "\"ph\":\"" + std::string(phase) + "\",";
-    event += "\"pid\":" + std::to_string(pid) + ",";
-    event += "\"tid\":" + std::to_string(tid) + ",";
-    event += "\"ts\":" + std::to_string(timestamp) + ",";
-    event += "\"s\":\"t\"";
-    event += "}\n";
-    m_data += event;
+    char buffer[128];
+    int len = std::snprintf(buffer, sizeof(buffer), "{\"name\":\"%s\",\"cat\":\"function\",\"ph\":\"%s\",\"pid\":%" PRIu64 ",\"tid\":%" PRIu64 ",\"ts\":%" PRIu64 ",\"s\":\"t\"}\n", name, phase, pid, tid, timestamp);
+    if (len > 0 && static_cast<std::size_t>(len) < sizeof(buffer)) {
+      m_data.append(buffer, len);
+    }
   }
 
   void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
@@ -93,15 +89,11 @@ public:
       m_data += ",";
     }
     m_flag = false;
-    std::string event = "{";
-    event += "\"name\":\"" + std::string(name) + "\",";
-    event += "\"cat\":\"function\",";
-    event += "\"ph\":\"" + std::string(phase) + "\",";
-    event += "\"pid\":" + std::to_string(pid) + ",";
-    event += "\"tid\":" + std::to_string(tid) + ",";
-    event += "\"ts\":" + std::to_string(timestamp);
-    event += "}\n";
-    m_data += event;
+    char buffer[128];
+    int len = std::snprintf(buffer, sizeof(buffer), "{\"name\":\"%s\",\"cat\":\"function\",\"ph\":\"%s\",\"pid\":%" PRIu64 ",\"tid\":%" PRIu64 ",\"ts\":%" PRIu64 "}\n", name, phase, pid, tid, timestamp);
+    if (len > 0 && static_cast<std::size_t>(len) < sizeof(buffer)) {
+      m_data.append(buffer, len);
+    }
   }
 
   void dump(const char *filename) {
@@ -111,7 +103,9 @@ public:
   }
 
 private:
-  Tracer() = default;
+  Tracer() {
+    m_data.reserve(8192000);
+  }
   ~Tracer() = default;
 
   std::string m_data;
