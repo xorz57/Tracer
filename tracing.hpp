@@ -28,8 +28,6 @@
 #include <fstream>
 #include <mutex>
 
-#include <nlohmann/json.hpp>
-
 #ifdef _WIN32
 #define NOMINMAX
 #include <Windows.h>
@@ -73,40 +71,42 @@ public:
 
   void trace_instant_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
-    nlohmann::json event;
-    event["name"] = name;
-    event["cat"] = "function";
-    event["ph"] = phase;
-    event["pid"] = pid;
-    event["tid"] = tid;
-    event["ts"] = timestamp;
-    event["s"] = "t";
-    m_data["traceEvents"].emplace_back(event);
+    std::string event = "{";
+    event += "\"name\":\"" + std::string(name) + "\",";
+    event += "\"cat\":\"function\",";
+    event += "\"ph\":\"" + std::string(phase) + "\",";
+    event += "\"pid\":" + std::to_string(pid) + ",";
+    event += "\"tid\":" + std::to_string(tid) + ",";
+    event += "\"ts\":" + std::to_string(timestamp) + ",";
+    event += "\"s\":\"t\"";
+    event += "},";
+    m_data += event;
   }
 
   void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
-    nlohmann::json event;
-    event["name"] = name;
-    event["cat"] = "function";
-    event["ph"] = phase;
-    event["pid"] = pid;
-    event["tid"] = tid;
-    event["ts"] = timestamp;
-    m_data["traceEvents"].emplace_back(event);
+    std::string event = "{";
+    event += "\"name\":\"" + std::string(name) + "\",";
+    event += "\"cat\":\"function\",";
+    event += "\"ph\":\"" + std::string(phase) + "\",";
+    event += "\"pid\":" + std::to_string(pid) + ",";
+    event += "\"tid\":" + std::to_string(tid) + ",";
+    event += "\"ts\":" + std::to_string(timestamp);
+    event += "},";
+    m_data += event;
   }
 
   void dump(const char *filename, int indent = 4) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
     std::ofstream ofs(filename);
-    ofs << m_data.dump(indent);
+    ofs << "{\"traceEvents\":[" << m_data << "]}";
   }
 
 private:
   Tracer() = default;
   ~Tracer() = default;
 
-  nlohmann::json m_data;
+  std::string m_data;
   std::mutex m_data_mutex;
 };
 
