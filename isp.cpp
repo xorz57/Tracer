@@ -142,6 +142,6 @@ int main() {
   for (auto &t : threads) {
     t.join();
   }
-  tracing::Tracer::get_instance().dump("trace.json", 4);
+  tracing::Tracer::get_instance().dump("trace.json");
   return 0;
 }

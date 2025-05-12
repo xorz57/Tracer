@@ -104,7 +104,7 @@ public:
     m_data += event;
   }
 
-  void dump(const char *filename, int indent = 4) {
+  void dump(const char *filename) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
     std::ofstream ofs(filename);
     ofs << "{\"traceEvents\":[\n" << m_data << "]}";
