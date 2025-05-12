@@ -79,7 +79,7 @@ public:
     event += "\"tid\":" + std::to_string(tid) + ",";
     event += "\"ts\":" + std::to_string(timestamp) + ",";
     event += "\"s\":\"t\"";
-    event += "},";
+    event += "},\n";
     m_data += event;
   }
 
@@ -92,14 +92,14 @@ public:
     event += "\"pid\":" + std::to_string(pid) + ",";
     event += "\"tid\":" + std::to_string(tid) + ",";
     event += "\"ts\":" + std::to_string(timestamp);
-    event += "},";
+    event += "},\n";
     m_data += event;
   }
 
   void dump(const char *filename, int indent = 4) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
     std::ofstream ofs(filename);
-    ofs << "{\"traceEvents\":[" << m_data << "]}";
+    ofs << "{\"traceEvents\":[\n" << m_data << "\n]}";
   }
 
 private:
