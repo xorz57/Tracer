@@ -3,7 +3,7 @@
 #include "tracing.hpp"
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"factorial", {{"n", n}}};
+  const tracing::DurationEvent event{"factorial"};
   if (n <= 1)
     return 1;
   return n * factorial(n - 1);

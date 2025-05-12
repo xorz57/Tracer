@@ -84,19 +84,6 @@ public:
     m_data["traceEvents"].emplace_back(event);
   }
 
-  void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp, nlohmann::json args) {
-    std::lock_guard<std::mutex> lock(m_data_mutex);
-    nlohmann::json event;
-    event["name"] = name;
-    event["cat"] = "function";
-    event["ph"] = phase;
-    event["pid"] = pid;
-    event["tid"] = tid;
-    event["ts"] = timestamp;
-    event["args"] = std::move(args);
-    m_data["traceEvents"].emplace_back(event);
-  }
-
   void trace_duration_event(const char *name, const char *phase, std::uint64_t pid, std::uint64_t tid, std::uint64_t timestamp) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
     nlohmann::json event;
@@ -129,10 +116,6 @@ static void instant_event(const char *name) {
 
 class DurationEvent final {
 public:
-  DurationEvent(const char *name, nlohmann::json args) : m_name(std::move(name)) {
-    Tracer::get_instance().trace_duration_event(name, "B", Tracer::get_pid(), Tracer::get_tid(), Tracer::get_timestamp(), std::move(args));
-  }
-
   DurationEvent(const char *name) : m_name(name) {
     Tracer::get_instance().trace_duration_event(name, "B", Tracer::get_pid(), Tracer::get_tid(), Tracer::get_timestamp());
   }

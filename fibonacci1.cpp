@@ -3,7 +3,7 @@
 #include "tracing.hpp"
 
 auto fibonacci(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"fibonacci", {{"n", n}}};
+  const tracing::DurationEvent event{"fibonacci"};
   if (n <= 1)
     return n;
   return fibonacci(n - 1) + fibonacci(n - 2);

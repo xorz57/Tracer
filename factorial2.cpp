@@ -3,7 +3,7 @@
 #include "tracing.hpp"
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"factorial", {{"n", n}}};
+  const tracing::DurationEvent event{"factorial"};
   std::uint64_t result = 1;
   for (std::uint64_t i = 2; i <= n; ++i) {
     result *= i;
