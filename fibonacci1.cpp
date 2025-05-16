@@ -3,9 +3,11 @@
 #include "tracing.hpp"
 
 auto fibonacci(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"fibonacci"};
-  if (n <= 1)
+  if (n <= 1) {
+    tracing::instant_event("fibonacci.base_case");
     return n;
+  }
+  const tracing::DurationEvent duration{"fibonacci.recursive_call"};
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 

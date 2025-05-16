@@ -3,9 +3,11 @@
 #include "tracing.hpp"
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"factorial"};
-  if (n <= 1)
+  if (n <= 1) {
+    tracing::instant_event("factorial.base_case");
     return 1;
+  }
+  const tracing::DurationEvent event{"factorial.recursive_call"};
   return n * factorial(n - 1);
 }
 

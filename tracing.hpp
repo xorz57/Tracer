@@ -77,7 +77,7 @@ public:
       m_data += ",";
     }
     m_flag = false;
-    char buffer[128];
+    char buffer[256];
     int len = std::snprintf(buffer, sizeof(buffer), "{\"name\":\"%s\",\"cat\":\"function\",\"ph\":\"%s\",\"pid\":%" PRIu64 ",\"tid\":%" PRIu64 ",\"ts\":%" PRIu64 ",\"s\":\"t\"}\n", name, phase, pid, tid, timestamp);
     if (len > 0 && static_cast<std::size_t>(len) < sizeof(buffer)) {
       m_data.append(buffer, len);
@@ -90,7 +90,7 @@ public:
       m_data += ",";
     }
     m_flag = false;
-    char buffer[128];
+    char buffer[256];
     int len = std::snprintf(buffer, sizeof(buffer), "{\"name\":\"%s\",\"cat\":\"function\",\"ph\":\"%s\",\"pid\":%" PRIu64 ",\"tid\":%" PRIu64 ",\"ts\":%" PRIu64 "}\n", name, phase, pid, tid, timestamp);
     if (len > 0 && static_cast<std::size_t>(len) < sizeof(buffer)) {
       m_data.append(buffer, len);
