@@ -1,0 +1,437 @@
+desc: (none)
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2823637
+mem_heap_B=73728
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2835904
+mem_heap_B=73829
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2840681
+mem_heap_B=74030
+mem_heap_extra_B=42
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2841685
+mem_heap_B=74030
+mem_heap_extra_B=42
+mem_stacks_B=0
+heap_tree=detailed
+n2: 74030 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n0: 302 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=2841685
+mem_heap_B=73929
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2844598
+mem_heap_B=74330
+mem_heap_extra_B=46
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2844928
+mem_heap_B=74129
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2852202
+mem_heap_B=74930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2852575
+mem_heap_B=74930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 74930 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 1202 0x4003760: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 1202 0x40036B2: allocate (alloc_traits.h:614)
+   n1: 1202 0x40036B2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 1202 0x40033EF: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 1202 0x4003593: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 1202 0x400322D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 1202 0x4002E7E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 1202 0x4002A0B: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 1202 0x4002BE9: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 1202 0x4002350: factorial(unsigned long) (factorial1.cpp:10)
+           n2: 1202 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+            n1: 801 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+             n1: 801 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+              n0: 801 0x40023CF: main (factorial1.cpp:15)
+            n0: 401 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=2852575
+mem_heap_B=74529
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2866615
+mem_heap_B=76130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2867024
+mem_heap_B=76130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 76130 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 2402 0x4003760: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 2402 0x40036B2: allocate (alloc_traits.h:614)
+   n1: 2402 0x40036B2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 2402 0x40033EF: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 2402 0x4003593: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 2402 0x400322D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 2402 0x4002E7E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 2402 0x4002A0B: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 2402 0x4002BE9: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 2402 0x4002350: factorial(unsigned long) (factorial1.cpp:10)
+           n2: 2402 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+            n1: 2402 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+             n2: 2402 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+              n1: 1601 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+               n1: 1601 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                n1: 1601 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                 n1: 1601 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                  n0: 1601 0x40023CF: main (factorial1.cpp:15)
+              n0: 801 0x40023CF: main (factorial1.cpp:15)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=2867024
+mem_heap_B=75329
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2894596
+mem_heap_B=78530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2895077
+mem_heap_B=78530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 78530 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 4802 0x4003760: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 4802 0x40036B2: allocate (alloc_traits.h:614)
+   n1: 4802 0x40036B2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 4802 0x40033EF: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 4802 0x4003593: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 4802 0x400322D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 4802 0x4002E7E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 4802 0x4002A0B: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 4802 0x4002BE9: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 4802 0x4002350: factorial(unsigned long) (factorial1.cpp:10)
+           n2: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+            n1: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+             n2: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+              n1: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+               n1: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                n1: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                 n2: 4802 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                  n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                   n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                    n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                     n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                      n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                       n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                        n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                         n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                          n0: 3201 0x40023CF: main (factorial1.cpp:15)
+                  n0: 1601 0x40023CF: main (factorial1.cpp:15)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=2895077
+mem_heap_B=76929
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2949584
+mem_heap_B=83330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2950221
+mem_heap_B=83330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 83330 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 9602 0x4003760: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 9602 0x40036B2: allocate (alloc_traits.h:614)
+   n1: 9602 0x40036B2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 9602 0x40033EF: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 9602 0x4003593: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 9602 0x400322D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 9602 0x4002E7E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 9602 0x4002A0B: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 6401 0x4002C45: tracing::DurationEvent::~DurationEvent() (tracing.hpp:126)
+          n1: 6401 0x4002374: factorial(unsigned long) (factorial1.cpp:12)
+           n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+            n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+             n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+              n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+               n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                 n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                  n0: 6401 0x40023CF: main (factorial1.cpp:15)
+         n1: 3201 0x4002BE9: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 3201 0x4002350: factorial(unsigned long) (factorial1.cpp:10)
+           n2: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+            n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+             n2: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+              n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+               n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                 n2: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                  n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                   n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                    n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                     n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                      n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                       n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                        n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                         n1: 3201 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                          n0: 3201 0x40023CF: main (factorial1.cpp:15)
+                  n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=2950221
+mem_heap_B=80129
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=2975375
+mem_heap_B=81153
+mem_heap_extra_B=39
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2979681
+mem_heap_B=81625
+mem_heap_extra_B=55
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=2980187
+mem_heap_B=89817
+mem_heap_extra_B=63
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=2985135
+mem_heap_B=89817
+mem_heap_extra_B=63
+mem_stacks_B=0
+heap_tree=peak
+n5: 89817 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 8192 0x49A207B: _M_allocate_internal_buffer (fstream.tcc:61)
+  n1: 8192 0x49A207B: std::basic_filebuf<char, std::char_traits<char> >::_M_allocate_internal_buffer() (fstream.tcc:54)
+   n1: 8192 0x49A6429: std::basic_filebuf<char, std::char_traits<char> >::open(char const*, std::_Ios_Openmode) (fstream.tcc:192)
+    n1: 8192 0x49A734B: open (fstream:981)
+     n1: 8192 0x49A734B: std::basic_ofstream<char, std::char_traits<char> >::basic_ofstream(char const*, std::_Ios_Openmode) (fstream:850)
+      n1: 8192 0x4002ACB: tracing::Tracer::dump(char const*) (tracing.hpp:102)
+       n0: 8192 0x4002410: main (factorial1.cpp:16)
+ n1: 6401 0x4003760: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 6401 0x40036B2: allocate (alloc_traits.h:614)
+   n1: 6401 0x40036B2: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 6401 0x40033EF: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 6401 0x4003593: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 6401 0x400322D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 6401 0x4002E7E: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 6401 0x4002A0B: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 6401 0x4002C45: tracing::DurationEvent::~DurationEvent() (tracing.hpp:126)
+          n1: 6401 0x4002374: factorial(unsigned long) (factorial1.cpp:12)
+           n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+            n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+             n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+              n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+               n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                 n1: 6401 0x4002360: factorial(unsigned long) (factorial1.cpp:11)
+                  n0: 6401 0x40023CF: main (factorial1.cpp:15)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 1024 0x4CB40BC: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4CC4105: _IO_doallocbuf (genops.c:373)
+   n1: 1024 0x4CC4105: _IO_doallocbuf (genops.c:368)
+    n1: 1024 0x4CC2078: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:746)
+     n1: 1024 0x4CC2BAA: _IO_new_file_xsputn (fileops.c:1245)
+      n1: 1024 0x4CC2BAA: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1198)
+       n1: 1024 0x4CB5917: fwrite (iofwrite.c:39)
+        n1: 1024 0x49BDCF1: sputn (streambuf:460)
+         n1: 1024 0x49BDCF1: _M_put (streambuf_iterator.h:329)
+          n1: 1024 0x49BDCF1: __write<char> (locale_facets.h:126)
+           n1: 1024 0x49BDCF1: std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const (locale_facets.tcc:958)
+            n1: 1024 0x49CF635: put (locale_facets.h:2413)
+             n1: 1024 0x49CF635: std::ostream& std::ostream::_M_insert<unsigned long>(unsigned long) (ostream.tcc:82)
+              n0: 1024 0x40023E4: main (factorial1.cpp:15)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=24
+#-----------
+time=2985135
+mem_heap_B=81625
+mem_heap_extra_B=55
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=2985497
+mem_heap_B=81153
+mem_heap_extra_B=39
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=2985956
+mem_heap_B=74752
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=2990219
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=2991407
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

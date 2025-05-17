@@ -1,0 +1,1179 @@
+desc: (none)
+cmd: ./a.out
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2823637
+mem_heap_B=73728
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2835904
+mem_heap_B=73829
+mem_heap_extra_B=27
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2840681
+mem_heap_B=74030
+mem_heap_extra_B=42
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2841685
+mem_heap_B=74030
+mem_heap_extra_B=42
+mem_stacks_B=0
+heap_tree=detailed
+n2: 74030 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n0: 302 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=2841685
+mem_heap_B=73929
+mem_heap_extra_B=23
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2844598
+mem_heap_B=74330
+mem_heap_extra_B=46
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2844928
+mem_heap_B=74129
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2852202
+mem_heap_B=74930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2852575
+mem_heap_B=74930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 74930 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 1202 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 1202 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 1202 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 1202 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 1202 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 1202 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 1202 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 1202 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 1202 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 1202 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 1202 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n0: 801 0x40023DC: main (fibonacci1.cpp:15)
+            n0: 401 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=2852575
+mem_heap_B=74529
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2866615
+mem_heap_B=76130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2867024
+mem_heap_B=76130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 76130 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 2402 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 2402 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 2402 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 2402 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 2402 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 2402 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 2402 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 2402 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 2402 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 2402 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 2402 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 2402 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 2402 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 1601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 1601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 1601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 1601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n0: 1601 0x40023DC: main (fibonacci1.cpp:15)
+              n0: 801 0x40023DC: main (fibonacci1.cpp:15)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=2867024
+mem_heap_B=75329
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=2894596
+mem_heap_B=78530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2895077
+mem_heap_B=78530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 78530 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 4802 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 4802 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 4802 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 4802 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 4802 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 4802 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n1: 4802 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 4802 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 4802 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 4802 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n2: 4802 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n0: 3201 0x40023DC: main (fibonacci1.cpp:15)
+                  n0: 1601 0x40023DC: main (fibonacci1.cpp:15)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=2895077
+mem_heap_B=76929
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2949653
+mem_heap_B=83330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2950290
+mem_heap_B=83330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 83330 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 9602 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 9602 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 9602 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 9602 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 9602 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 9602 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 9602 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 6401 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 6401 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n1: 6401 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 6401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                            n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                             n0: 6401 0x40023DC: main (fibonacci1.cpp:15)
+        n1: 3201 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 3201 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 3201 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n2: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 3201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n0: 3201 0x40023DC: main (fibonacci1.cpp:15)
+                  n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=19
+#-----------
+time=2950290
+mem_heap_B=80129
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=3055549
+mem_heap_B=92930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=3056486
+mem_heap_B=92930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 92930 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 19202 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 19202 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 19202 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 19202 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 19202 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 19202 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 19202 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 19202 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 19202 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n2: 19202 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n1: 12801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 12801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 12801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                            n0: 12801 0x40023DC: main (fibonacci1.cpp:15)
+           n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 6401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                            n1: 6401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                             n0: 6401 0x40023DC: main (fibonacci1.cpp:15)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=3056486
+mem_heap_B=86529
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=3269871
+mem_heap_B=112130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=3282918
+mem_heap_B=112130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 112130 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+ n1: 38402 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 38402 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 38402 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 38402 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 38402 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 38402 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 38402 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 38402 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 38402 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n2: 38402 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n1: 38402 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 38402 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 38402 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 25601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                            n0: 25601 0x40023DC: main (fibonacci1.cpp:15)
+              n1: 12801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n1: 12801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                            n0: 12801 0x40023DC: main (fibonacci1.cpp:15)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=3282918
+mem_heap_B=99329
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=3709179
+mem_heap_B=150530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3735065
+mem_heap_B=150530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 150530 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 76802 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 76802 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 76802 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 76802 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 76802 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 76802 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 76802 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 51201 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 51201 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 51201 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n1: 51201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 51201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 51201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n0: 51201 0x40023DC: main (fibonacci1.cpp:15)
+           n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n1: 25601 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 25601 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n2: 25601 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n1: 25601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 25601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 25601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n1: 25601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                            n0: 25601 0x40023DC: main (fibonacci1.cpp:15)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=28
+#-----------
+time=3735065
+mem_heap_B=124929
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=4583679
+mem_heap_B=227330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=4635216
+mem_heap_B=227330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 227330 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 153602 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 153602 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 153602 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 153602 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 153602 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 153602 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 153602 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 153602 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 102401 0x4002C51: tracing::DurationEvent::~DurationEvent() (tracing.hpp:126)
+          n1: 102401 0x4002381: fibonacci(unsigned long) (fibonacci1.cpp:12)
+           n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 102401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n0: 102401 0x40023DC: main (fibonacci1.cpp:15)
+         n1: 51201 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 51201 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n1: 51201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 51201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 51201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 51201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n0: 51201 0x40023DC: main (fibonacci1.cpp:15)
+           n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=31
+#-----------
+time=4635216
+mem_heap_B=176129
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=6328622
+mem_heap_B=380930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=6431197
+mem_heap_B=380930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 380930 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 307202 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 307202 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 307202 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 307202 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 307202 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 307202 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 307202 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 204801 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 204801 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n2: 204801 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n2: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n0: 204801 0x40023DC: main (fibonacci1.cpp:15)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+        n2: 102401 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 102401 0x4002C51: tracing::DurationEvent::~DurationEvent() (tracing.hpp:126)
+          n1: 102401 0x4002381: fibonacci(unsigned long) (fibonacci1.cpp:12)
+           n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 102401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 102401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n0: 102401 0x40023DC: main (fibonacci1.cpp:15)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=34
+#-----------
+time=6431197
+mem_heap_B=278529
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=9824230
+mem_heap_B=688130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=10029256
+mem_heap_B=688130
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 688130 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 614402 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 614402 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 614402 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 614402 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 614402 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 614402 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 614402 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 409601 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 409601 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 409601 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n2: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 409601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 409601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n0: 409601 0x40023DC: main (fibonacci1.cpp:15)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 2 places, all below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n1: 204801 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 204801 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n2: 204801 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n2: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 204801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 204801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n0: 204801 0x40023DC: main (fibonacci1.cpp:15)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=37
+#-----------
+time=10029256
+mem_heap_B=483329
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=16814785
+mem_heap_B=1302530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=17224622
+mem_heap_B=1302530
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1302530 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1228802 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 1228802 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 1228802 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 1228802 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 1228802 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 1228802 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 1228802 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 1228802 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 1228802 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n3: 1228802 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n0: 819201 0x40023DC: main (fibonacci1.cpp:15)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n2: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n2: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 409601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 409601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 409601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n0: 409601 0x40023DC: main (fibonacci1.cpp:15)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=40
+#-----------
+time=17224622
+mem_heap_B=892929
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=30795205
+mem_heap_B=2531330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=31614647
+mem_heap_B=2531330
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2531330 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2457602 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 2457602 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 2457602 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 2457602 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 2457602 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 2457602 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 2457602 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 2457602 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 2457602 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n3: 2457602 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 1638401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 1638401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n0: 1638401 0x40023DC: main (fibonacci1.cpp:15)
+                  n0: 0 in 2 places, all below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n2: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 819201 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 819201 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n0: 819201 0x40023DC: main (fibonacci1.cpp:15)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=43
+#-----------
+time=31614647
+mem_heap_B=1712129
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=58751881
+mem_heap_B=4988930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=58932613
+mem_heap_B=4988930
+mem_heap_extra_B=54
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4988930 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4915202 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 4915202 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 4915202 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 4915202 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 4915202 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 4915202 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 4915202 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n2: 4915202 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 3276801 0x4002C51: tracing::DurationEvent::~DurationEvent() (tracing.hpp:126)
+          n1: 3276801 0x4002381: fibonacci(unsigned long) (fibonacci1.cpp:12)
+           n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n2: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n0: 3276801 0x40023DC: main (fibonacci1.cpp:15)
+             n0: 0 in 1 place, below massif's threshold (1.00%)
+         n1: 1638401 0x4002BF5: tracing::DurationEvent::DurationEvent(char const*) (tracing.hpp:122)
+          n2: 1638401 0x400234F: fibonacci(unsigned long) (fibonacci1.cpp:10)
+           n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n2: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 1638401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                       n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                        n1: 1638401 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                         n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                          n1: 1638401 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                           n0: 1638401 0x40023DC: main (fibonacci1.cpp:15)
+                  n0: 0 in 2 places, all below massif's threshold (1.00%)
+                 n0: 0 in 1 place, below massif's threshold (1.00%)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x4929E7F: pool (eh_alloc.cc:235)
+  n1: 73728 0x4929E7F: __static_initialization_and_destruction_0 (eh_alloc.cc:373)
+   n1: 73728 0x4929E7F: _GLOBAL__sub_I_eh_alloc.cc (eh_alloc.cc:456)
+    n1: 73728 0x400C2F6: call_init (dl-init.c:74)
+     n1: 73728 0x400C2F6: call_init (dl-init.c:26)
+      n1: 73728 0x400C3CC: _dl_init (dl-init.c:121)
+       n0: 73728 0x402461F: ??? (in /usr/lib/ld-linux-x86-64.so.2)
+#-----------
+snapshot=46
+#-----------
+time=58932613
+mem_heap_B=3350529
+mem_heap_extra_B=31
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=113210008
+mem_heap_B=9904130
+mem_heap_extra_B=4070
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=113570940
+mem_heap_B=9904130
+mem_heap_extra_B=4070
+mem_stacks_B=0
+heap_tree=peak
+n2: 9904130 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 9830402 0x400376C: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:151)
+  n1: 9830402 0x40036BE: allocate (alloc_traits.h:614)
+   n1: 9830402 0x40036BE: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) (basic_string.h:142)
+    n1: 9830402 0x40033FB: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) (basic_string.tcc:164)
+     n1: 9830402 0x400359F: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (basic_string.tcc:363)
+      n2: 9830402 0x4003239: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) (basic_string.tcc:455)
+       n2: 9830402 0x4002E8A: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) (basic_string.h:1570)
+        n1: 6553601 0x4002891: tracing::Tracer::trace_instant_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:83)
+         n1: 6553601 0x40022F5: tracing::instant_event(char const*) (tracing.hpp:116)
+          n2: 6553601 0x4002333: fibonacci(unsigned long) (fibonacci1.cpp:7)
+           n1: 6553601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n1: 6553601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n2: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 6553601 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 6553601 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n0: 6553601 0x40023DC: main (fibonacci1.cpp:15)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+           n0: 0 in 1 place, below massif's threshold (1.00%)
+        n2: 3276801 0x4002A17: tracing::Tracer::trace_duration_event(char const*, char const*, unsigned long, unsigned long, unsigned long) (tracing.hpp:96)
+         n1: 3276801 0x4002C51: tracing::DurationEvent::~DurationEvent() (tracing.hpp:126)
+          n1: 3276801 0x4002381: fibonacci(unsigned long) (fibonacci1.cpp:12)
+           n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+            n2: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+             n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+              n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+               n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                 n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                  n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                   n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                    n1: 3276801 0x4002372: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                     n1: 3276801 0x400235F: fibonacci(unsigned long) (fibonacci1.cpp:11)
+                      n0: 3276801 0x40023DC: main (fibonacci1.cpp:15)
+             n0: 0 in 1 place, below massif's threshold (1.00%)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 73728 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=113570940
+mem_heap_B=6627329
+mem_heap_extra_B=4047
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=115971312
+mem_heap_B=6628353
+mem_heap_extra_B=4055
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=115974853
+mem_heap_B=6628825
+mem_heap_extra_B=4071
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=115975359
+mem_heap_B=6637017
+mem_heap_extra_B=4079
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=115979997
+mem_heap_B=6628825
+mem_heap_extra_B=4071
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=115980359
+mem_heap_B=6628353
+mem_heap_extra_B=4055
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=115980818
+mem_heap_B=74752
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=115985081
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=115986269
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
