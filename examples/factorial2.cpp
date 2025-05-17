@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "tracing.hpp"
+#include <xorz57/tracing.hpp>
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
-  tracing::DurationEvent const event{"factorial"};
+  xorz57::tracing::DurationEvent const event{"factorial"};
   std::uint64_t result = 1;
   for (std::uint64_t i = 2; i <= n; ++i) {
     result *= i;
@@ -13,5 +13,5 @@ auto factorial(std::uint64_t n) -> std::uint64_t {
 
 auto main() -> int {
   std::cout << factorial(20) << std::endl;
-  tracing::Tracer::get_instance().dump("trace.json");
+  xorz57::tracing::Tracer::get_instance().dump("trace.json");
 }

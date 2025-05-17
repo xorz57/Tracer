@@ -37,6 +37,7 @@
 #include <unistd.h>
 #endif
 
+namespace xorz57 {
 namespace tracing {
 class Tracer final {
 public:
@@ -100,7 +101,8 @@ public:
   void dump(const char *filename) {
     std::lock_guard<std::mutex> lock(m_data_mutex);
     std::ofstream ofs(filename);
-    ofs << "{\"traceEvents\":[\n" << m_data << "]}";
+    ofs << "{\"traceEvents\":[\n"
+        << m_data << "]}";
   }
 
 private:
@@ -130,3 +132,4 @@ private:
   const char *m_name;
 };
 } // namespace tracing
+} // namespace xorz57

@@ -5,20 +5,20 @@
 ```cpp
 #include <iostream>
 
-#include "tracing.hpp"
+#include <xorz57/tracing.hpp>
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
   if (n <= 1) {
-    tracing::instant_event("factorial.base_case");
+    xorz57::tracing::instant_event("factorial.base_case");
     return 1;
   }
-  tracing::DurationEvent const event{"factorial.recursive_call"};
+  xorz57::tracing::DurationEvent const event{"factorial.recursive_call"};
   return n * factorial(n - 1);
 }
 
 auto main() -> int {
   std::cout << factorial(20) << std::endl;
-  tracing::Tracer::get_instance().dump("trace.json");
+  xorz57::tracing::Tracer::get_instance().dump("trace.json");
 }
 ```
 
@@ -31,10 +31,10 @@ auto main() -> int {
 ```cpp
 #include <iostream>
 
-#include "tracing.hpp"
+#include <xorz57/tracing.hpp>
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
-  tracing::DurationEvent const event{"factorial"};
+  xorz57::tracing::DurationEvent const event{"factorial"};
   std::uint64_t result = 1;
   for (std::uint64_t i = 2; i <= n; ++i) {
     result *= i;
@@ -44,7 +44,7 @@ auto factorial(std::uint64_t n) -> std::uint64_t {
 
 auto main() -> int {
   std::cout << factorial(20) << std::endl;
-  tracing::Tracer::get_instance().dump("trace.json");
+  xorz57::tracing::Tracer::get_instance().dump("trace.json");
 }
 ```
 
@@ -57,20 +57,20 @@ auto main() -> int {
 ```cpp
 #include <iostream>
 
-#include "tracing.hpp"
+#include <xorz57/tracing.hpp>
 
 auto fibonacci(std::uint64_t n) -> std::uint64_t {
   if (n <= 1) {
-    tracing::instant_event("fibonacci.base_case");
+    xorz57::tracing::instant_event("fibonacci.base_case");
     return n;
   }
-  tracing::DurationEvent const duration{"fibonacci.recursive_call"};
+  xorz57::tracing::DurationEvent const duration{"fibonacci.recursive_call"};
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 auto main() -> int {
   std::cout << fibonacci(20) << std::endl;
-  tracing::Tracer::get_instance().dump("trace.json");
+  xorz57::tracing::Tracer::get_instance().dump("trace.json");
 }
 ```
 
@@ -83,10 +83,10 @@ auto main() -> int {
 ```cpp
 #include <iostream>
 
-#include "tracing.hpp"
+#include <xorz57/tracing.hpp>
 
 auto fibonacci(std::uint64_t n) -> std::uint64_t {
-  tracing::DurationEvent const event{"fibonacci"};
+  xorz57::tracing::DurationEvent const event{"fibonacci"};
   if (n <= 1)
     return n;
   std::uint64_t a = 0;
@@ -101,7 +101,7 @@ auto fibonacci(std::uint64_t n) -> std::uint64_t {
 
 auto main() -> int {
   std::cout << fibonacci(20) << std::endl;
-  tracing::Tracer::get_instance().dump("trace.json");
+  xorz57::tracing::Tracer::get_instance().dump("trace.json");
 }
 ```
 

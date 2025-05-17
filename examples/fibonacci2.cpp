@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "tracing.hpp"
+#include <xorz57/tracing.hpp>
 
 auto fibonacci(std::uint64_t n) -> std::uint64_t {
-  tracing::DurationEvent const event{"fibonacci"};
+  xorz57::tracing::DurationEvent const event{"fibonacci"};
   if (n <= 1)
     return n;
   std::uint64_t a = 0;
@@ -18,5 +18,5 @@ auto fibonacci(std::uint64_t n) -> std::uint64_t {
 
 auto main() -> int {
   std::cout << fibonacci(20) << std::endl;
-  tracing::Tracer::get_instance().dump("trace.json");
+  xorz57::tracing::Tracer::get_instance().dump("trace.json");
 }
