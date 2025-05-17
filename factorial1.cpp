@@ -7,7 +7,7 @@ auto factorial(std::uint64_t n) -> std::uint64_t {
     tracing::instant_event("factorial.base_case");
     return 1;
   }
-  const tracing::DurationEvent event{"factorial.recursive_call"};
+  tracing::DurationEvent const event{"factorial.recursive_call"};
   return n * factorial(n - 1);
 }
 

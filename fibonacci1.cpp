@@ -7,7 +7,7 @@ auto fibonacci(std::uint64_t n) -> std::uint64_t {
     tracing::instant_event("fibonacci.base_case");
     return n;
   }
-  const tracing::DurationEvent duration{"fibonacci.recursive_call"};
+  tracing::DurationEvent const duration{"fibonacci.recursive_call"};
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 

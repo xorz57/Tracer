@@ -12,7 +12,7 @@ auto factorial(std::uint64_t n) -> std::uint64_t {
     tracing::instant_event("factorial.base_case");
     return 1;
   }
-  const tracing::DurationEvent event{"factorial.recursive_call"};
+  tracing::DurationEvent const event{"factorial.recursive_call"};
   return n * factorial(n - 1);
 }
 
@@ -34,7 +34,7 @@ auto main() -> int {
 #include "tracing.hpp"
 
 auto factorial(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"factorial"};
+  tracing::DurationEvent const event{"factorial"};
   std::uint64_t result = 1;
   for (std::uint64_t i = 2; i <= n; ++i) {
     result *= i;
@@ -64,7 +64,7 @@ auto fibonacci(std::uint64_t n) -> std::uint64_t {
     tracing::instant_event("fibonacci.base_case");
     return n;
   }
-  const tracing::DurationEvent duration{"fibonacci.recursive_call"};
+  tracing::DurationEvent const duration{"fibonacci.recursive_call"};
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
@@ -86,7 +86,7 @@ auto main() -> int {
 #include "tracing.hpp"
 
 auto fibonacci(std::uint64_t n) -> std::uint64_t {
-  const tracing::DurationEvent event{"fibonacci"};
+  tracing::DurationEvent const event{"fibonacci"};
   if (n <= 1)
     return n;
   std::uint64_t a = 0;
