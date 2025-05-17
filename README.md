@@ -22,6 +22,8 @@ auto main() -> int {
 }
 ```
 
+![factorial1](perfetto/factorial1.png)
+
 ![factorial1](massif/factorial1.png)
 
 ## Factorial 2
@@ -46,6 +48,8 @@ auto main() -> int {
 }
 ```
 
+![factorial2](perfetto/factorial2.png)
+
 ![factorial2](massif/factorial2.png)
 
 ## Fibonacci 1
@@ -69,6 +73,8 @@ auto main() -> int {
   tracing::Tracer::get_instance().dump("trace.json");
 }
 ```
+
+![fibonacci1](perfetto/fibonacci1.png)
 
 ![fibonacci1](massif/fibonacci1.png)
 
@@ -98,5 +104,7 @@ auto main() -> int {
   tracing::Tracer::get_instance().dump("trace.json");
 }
 ```
+
+![fibonacci2](perfetto/fibonacci2.png)
 
 ![fibonacci2](massif/fibonacci2.png)
